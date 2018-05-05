@@ -2,7 +2,7 @@
 #include <cs50.h>
 #include <string.h>
 int main(void){
-    string input = GetString();
+    string input = get_string();
     int sum =0, part1 =0, part2 =0,part3=0,part4=0,i =0,j =0,x=0,y=0, slength =0, validate =0,count =0;
     //printf("%s\n", input);
      slength = strlen(input);
@@ -11,7 +11,7 @@ int main(void){
       count = (slength/2-1);
       x = x + 1;
     }
-    
+
     else if(strlen(input) ==13){
         count = slength/2;
     }
@@ -19,8 +19,8 @@ int main(void){
         count = slength/2-1;
         x = x +1;
         y = y -1;
-        
-        
+
+
     }
     for(i =0;i<count +x;i++){
 
@@ -31,28 +31,28 @@ int main(void){
         part4 =part1 % 10;
         part1 = part3 + part4;
     }
-    
+
     printf("p2 %i\n", part1);
-    
+
     sum = sum +part1;
     }
     for(j=0;j<count+1+x+y;j++){
     part2 = input[(slength-1)-(2*j)];
     part2 = (part2 -48);
-    
-    printf("p1 %i\n", part2);  
-    
+
+    printf("p1 %i\n", part2);
+
     sum = sum +part2;
     }
-    
-    
-    
-    
+
+
+
+
     printf("%i\n", sum);
     sum = sum % 10;
     printf("%i\n",sum);
     if(sum==0){
-        
+
         if((strlen(input)==13 || strlen(input)==16) && input[0] == '4'){
         printf("Visa\n");
     }
@@ -63,7 +63,7 @@ int main(void){
         printf("American Express\n");
     }
     else{
-      printf("invalid1\n");  
+      printf("invalid1\n");
     }
 }
 else{
