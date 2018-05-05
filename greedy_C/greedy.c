@@ -19,7 +19,7 @@ printf("How much change do you need?");
 if(input>q){
     qcount= input/q;
     input = input-qcount*q;
-    
+
 }
 if(input>d){
     dcount= input/d;
